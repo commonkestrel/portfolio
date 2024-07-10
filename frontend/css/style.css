@@ -15,11 +15,13 @@ body {
 .header {
   display: flex;
   flex-direction: row;
-  width: 100%;
-  height: 20rem;
+  width: calc(120vw);
+  height: calc(30vw + 20vh);
+  max-height: 70vh;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -10rem;
+  left: -10vw;
+  transform: rotate(-5deg);
 }
 
 .name-card {
@@ -32,18 +34,18 @@ body {
 
 .name-card h1 {
   padding: 0;
-  top: 0rem;
-  left: 5rem;
+  bottom: -1rem;
+  left: calc(2rem + 10vw);
   position: absolute;
   margin: 0;
-  font-size: 15rem;
+  font-size: calc(min(15rem, 20vw));
   font-weight: normal;
 }
 
 .name-card h2 {
   position: absolute;
-  left: 9rem;
-  top: 15.5rem;
+  left: calc(6rem + 10vw);
+  top: 25.5rem;
   margin: 0;
   font-size: 3rem;
   font-weight: normal;
@@ -52,9 +54,10 @@ body {
 
 .name-card ul {
   position: absolute;
-  left: 40rem;
-  top: 8rem;
-  font-size: 2rem;
+  right: 50vw;
+  top: calc(min(35vh, 15vw + 10rem));
+  font-size: calc(min(2vw, 2rem));
+  transform: TranslateY(-50%);
 }
 
 .nav-card {
