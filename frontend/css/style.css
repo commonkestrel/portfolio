@@ -1,4 +1,65 @@
 html {
   height: 100%;
   width: 100%;
+
+  --primary-color: #F6FFFF;
+  --primary-background: #D60619;
+  --secondary-color: #D2DBED;
+  --secondary-background: #234428;
+}
+
+body {
+  font-family: 'Jost', serif;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 20rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.name-card {
+  margin: 0;
+  height: 100%;
+  width: 60%;
+  background-color: var(--primary-background);
+  color: var(--primary-color);
+}
+
+.name-card h1 {
+  padding: 0;
+  top: 0rem;
+  left: 5rem;
+  position: absolute;
+  margin: 0;
+  font-size: 15rem;
+  font-weight: normal;
+}
+
+.name-card h2 {
+  position: absolute;
+  left: 9rem;
+  top: 15.5rem;
+  margin: 0;
+  font-size: 3rem;
+  font-weight: normal;
+  letter-spacing: 2px;
+}
+
+.name-card ul {
+  position: absolute;
+  left: 40rem;
+  top: 8rem;
+  font-size: 2rem;
+}
+
+.nav-card {
+  background-color: var(--secondary-background);
+  height: 100%;
+  width: 40%;
+  margin: 0;
 }
