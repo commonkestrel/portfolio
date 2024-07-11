@@ -6,36 +6,38 @@ html {
   --primary-background: #D60619;
   --secondary-color: #D2DBED;
   --secondary-background: #234428;
+  overflow: hidden;
 }
 
 body {
+  width: 100%;
   font-family: 'Jost', serif;
 }
 
 .header {
   display: flex;
   flex-direction: row;
-  width: calc(120vw);
+  width: 200vw;
   height: calc(30vw + 20vh);
   max-height: 70vh;
   position: absolute;
   top: -10rem;
-  left: -10vw;
+  left: -20vw;
   transform: rotate(-5deg);
 }
 
 .name-card {
   margin: 0;
   height: 100%;
-  width: 60%;
+  width: 42%;
   background-color: var(--primary-background);
   color: var(--primary-color);
 }
 
 .name-card h1 {
   padding: 0;
-  bottom: -1rem;
-  left: calc(2rem + 10vw);
+  bottom: -1vw;
+  left: calc(2rem + 20vw);
   position: absolute;
   margin: 0;
   font-size: calc(min(15rem, 20vw));
@@ -44,18 +46,18 @@ body {
 
 .name-card h2 {
   position: absolute;
-  left: calc(6rem + 10vw);
-  top: 25.5rem;
+  left: calc(min(6rem + 20vw, 2rem + 25vw));
+  bottom: calc(min(0.75rem, 1vw));
   margin: 0;
-  font-size: 3rem;
+  font-size: calc(min(3rem, 4vw));
   font-weight: normal;
   letter-spacing: 2px;
 }
 
 .name-card ul {
   position: absolute;
-  right: 50vw;
-  top: calc(min(35vh, 15vw + 10rem));
+  right: 117.5vw;
+  bottom: calc(min(3rem, 3vw));
   font-size: calc(min(2vw, 2rem));
   transform: TranslateY(-50%);
 }
@@ -63,6 +65,12 @@ body {
 .nav-card {
   background-color: var(--secondary-background);
   height: 100%;
-  width: 40%;
+  width: 58%;
   margin: 0;
+}
+
+@media (orientation: portrait) {
+  .name-card ul {
+    display: none;
+  }
 }
