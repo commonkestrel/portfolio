@@ -80,25 +80,40 @@ body {
 
 .header-link {
   color: var(--secondary-color);
+  background-color: var(--secondary-background);
   font-size: calc(min(2.5rem, 4vw));
-  margin: 0.5rem;
   cursor: pointer;
+  transition: color 0.5s ease-out, background-color 0.5s ease-out;
 }
 
-.header-link:not(:first-child) {
+div:has(> .header-link) {
+  display: inline-block;
+  padding-bottom: 0.25rem;
+}
+
+.header-link:hover {
+  color: var(--secondary-background);
+  background-color: var(--secondary-color);
+}
+
+.link-wrapper:first-child > .header-link {
+  text-decoration: none;
+}
+
+.link-wrapper:not(:first-child) > .header-link {
   text-decoration: overline;
   text-decoration-color: #4E624D;
 }
 
-.header-link:nth-last-child(2) {
+.link-wrapper:nth-last-child(2) {
   transform: translateX(calc(1*(min(2.5rem, 4vw) + 2rem)*sin(5deg)));
 }
 
-.header-link:nth-last-child(3) {
+.link-wrapper:nth-last-child(3) {
   transform: translateX(calc(2*(min(2.5rem, 4vw) + 2rem)*sin(5deg)));
 }
 
-.header-link:nth-last-child(4) {
+.link-wrapper:nth-last-child(4) {
   transform: translateX(calc(3*(min(2.5rem, 4vw) + 2rem)*sin(5deg)));
 }
 
