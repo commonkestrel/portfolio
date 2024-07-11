@@ -29,7 +29,7 @@ body {
 .name-card {
   margin: 0;
   height: 100%;
-  width: 42%;
+  width: 35%;
   background-color: var(--primary-background);
   color: var(--primary-color);
 }
@@ -56,17 +56,50 @@ body {
 
 .name-card ul {
   position: absolute;
-  right: 117.5vw;
-  bottom: calc(min(3rem, 3vw));
-  font-size: calc(min(2vw, 2rem));
+  right: 131vw;
+  bottom: calc(min(1.5rem, 2vw));
+  font-size: calc(min(2rem, 1.5vw));
   transform: TranslateY(-50%);
 }
 
 .nav-card {
   background-color: var(--secondary-background);
   height: 100%;
-  width: 58%;
+  width: 65%;
   margin: 0;
+}
+
+.header-nav {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  bottom: 1vw;
+  right: 85vw;
+}
+
+.header-link {
+  color: var(--secondary-color);
+  font-size: calc(min(2.5rem, 4vw));
+  margin: 0.5rem;
+  cursor: pointer;
+}
+
+.header-link:not(:first-child) {
+  text-decoration: overline;
+  text-decoration-color: #4E624D;
+}
+
+.header-link:nth-last-child(2) {
+  transform: translateX(calc(1*(min(2.5rem, 4vw) + 2rem)*sin(5deg)));
+}
+
+.header-link:nth-last-child(3) {
+  transform: translateX(calc(2*(min(2.5rem, 4vw) + 2rem)*sin(5deg)));
+}
+
+.header-link:nth-last-child(4) {
+  transform: translateX(calc(3*(min(2.5rem, 4vw) + 2rem)*sin(5deg)));
 }
 
 @media (orientation: portrait) {
