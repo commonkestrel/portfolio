@@ -35,6 +35,12 @@ async fn contact() -> actix_web::Result<NamedFile> {
     Ok(NamedFile::open_async(path).await?)
 }
 
+#[get("/favicon.ico")]
+async fn favicon() -> actix_web::Result<NamedFile> {
+    let path = Path::new(FRONTEND).join("static").join("favicon.ico");
+    Ok(NamedFile::open_async(path).await?)
+}
+
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
 
@@ -47,6 +53,7 @@ async fn main() -> std::io::Result<()> {
             .service(experience)
             .service(extracurriculars)
             .service(contact)
+            .service(favicon)
             .service(actix_files::Files::new("/static", Path::new(FRONTEND).join("static")))
             .service(actix_files::Files::new("/js", Path::new(FRONTEND).join("out")))
             .service(actix_files::Files::new("/css", Path::new(FRONTEND).join("css")))
