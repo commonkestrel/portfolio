@@ -3,9 +3,9 @@ html {
     width: 100%;
 
     --primary-color: #F6FFFF;
-    --primary-background: #e80013;
+    --primary-background: #e30000;
     --secondary-color: #D2DBED;
-    --secondary-background: #151915;
+    --secondary-background: #001406;
     overflow: hidden;
 }
 

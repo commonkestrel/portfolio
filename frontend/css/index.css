@@ -26,7 +26,7 @@
 .name-card h1 {
   padding: 0;
   bottom: -1vw;
-  right: 0vw;
+  left: 14vw;
   position: relative;
   margin: 0;
   font-size: calc(min(20rem, 25vw));
@@ -35,7 +35,7 @@
 
 .name-card h2 {
   position: relative;
-  right: calc(4.5*min(4.25rem, 5vw));
+  right: calc(4.5*min(4.25rem, 5vw) - 14vw);
   bottom: calc(min(4.25rem, 0.5vw));
   margin: 0;
   font-size: calc(min(4.25rem, 5vw));
@@ -51,6 +51,17 @@
   font-size: calc(min(2rem, 1.5vw));
 }
 
+.name-card .circle {
+  height: 14vw;
+  width: 14vw;
+  background-color: var(--secondary-background);
+  border-radius: 7vw;
+  overflow: hidden;
+  position: relative;
+  bottom: 2vw;
+  left: 12vw;
+}
+
 .nav-card {
   display: flex;
   align-items: end;
@@ -58,6 +69,18 @@
   height: calc(100%);
   width: 65%;
   margin: 0;
+  overflow: hidden;
+}
+
+.nav-card .circle {
+  height: 14vw;
+  width: 14vw;
+  background-color: var(--secondary-color);
+  border-radius: 7vw;
+  overflow: hidden;
+  position: relative;
+  bottom: 2vw;
+  right: 2vw;
 }
 
 .header-nav {
@@ -330,6 +353,10 @@ div:has(> .header-link) {
   }
 
   #hex-inversion {
+    display: none;
+  }
+
+  .circle {
     display: none;
   }
 }

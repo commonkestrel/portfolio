@@ -4,7 +4,7 @@ main {
     position: absolute;
     left: 0;
     top: 4rem;
-    background-color: #080a08;
+    background-color: #090c09;
     width: 100%;
     min-height: 100%;
     color: var(--secondary-color);
@@ -55,6 +55,10 @@ p .highlight::before {
 .body {
     width: 100%;
     text-align: left;
+}
+
+.content p, .content a {
+    font-size: 1.25rem;
 }
 
 @media (orientation:landscape) {
