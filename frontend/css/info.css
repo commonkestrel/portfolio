@@ -24,7 +24,7 @@ main {
     line-height: 2;
     z-index: 5;
     position: relative;
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
     justify-content: flex-end;
 }
@@ -42,10 +42,19 @@ main {
     opacity: 40%;
     position: absolute;
     left: -2.5%;
-    bottom: 0.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5em;
     transition: height 200ms ease;
     background: linear-gradient(180deg, transparent 50%, var(--primary-background) 50%);
+}
+
+p .highlight::before {
+    width: 100%;
+    left: 0;
+}
+
+.body {
+    width: 100%;
+    text-align: left;
 }
 
 @media (orientation:landscape) {

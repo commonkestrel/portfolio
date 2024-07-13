@@ -18,37 +18,42 @@
   width: 35%;
   background-color: var(--primary-background);
   color: var(--primary-color);
+  display: flex;
+  justify-content: end;
+  align-items: end;
 }
 
 .name-card h1 {
   padding: 0;
   bottom: -1vw;
-  left: calc(2rem + 20vw);
-  position: absolute;
+  right: 0vw;
+  position: relative;
   margin: 0;
-  font-size: calc(min(15rem, 20vw));
+  font-size: calc(min(20rem, 25vw));
   font-weight: normal;
 }
 
 .name-card h2 {
-  position: absolute;
-  left: calc(min(6rem + 20vw, 2rem + 25vw));
+  position: relative;
+  right: calc(4.5*min(4.25rem, 5vw));
   bottom: calc(min(4.25rem, 0.5vw));
   margin: 0;
-  font-size: calc(min(3rem, 4vw));
+  font-size: calc(min(4.25rem, 5vw));
   font-weight: normal;
   letter-spacing: 2px;
 }
 
-.name-card ul {
-  position: absolute;
-  right: 131vw;
-  bottom: calc(min(5rem, 5vw));
+.nav-card ul {
+  color: var(--primary-color);
+  position: relative;
+  left: 2rem;
+  bottom: 3rem;
   font-size: calc(min(2rem, 1.5vw));
-  transform: TranslateY(50%);
 }
 
 .nav-card {
+  display: flex;
+  align-items: end;
   background-color: var(--secondary-background);
   height: calc(100%);
   width: 65%;
@@ -271,6 +276,7 @@ div:has(> .header-link) {
   justify-content: right;
   margin: 0;
   font-size: 2vh;
+  font-weight: 700;
   position: relative;
   display: flex;
   flex-direction: row;

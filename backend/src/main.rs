@@ -23,9 +23,9 @@ async fn experience() -> actix_web::Result<NamedFile> {
     Ok(NamedFile::open_async(path).await?)
 }
 
-#[get("/extracurriculars")]
-async fn extracurriculars() -> actix_web::Result<NamedFile> {
-    let path = Path::new(FRONTEND).join("extracurriculars.html");
+#[get("/projects")]
+async fn projects() -> actix_web::Result<NamedFile> {
+    let path = Path::new(FRONTEND).join("projects.html");
     Ok(NamedFile::open_async(path).await?)
 }
 
@@ -51,7 +51,7 @@ async fn main() -> std::io::Result<()> {
             .service(index)
             .service(about)
             .service(experience)
-            .service(extracurriculars)
+            .service(projects)
             .service(contact)
             .service(favicon)
             .service(actix_files::Files::new("/static", Path::new(FRONTEND).join("static")))
