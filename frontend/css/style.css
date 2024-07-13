@@ -187,8 +187,37 @@ div:has(> .header-link) {
   border-radius: 0.25rem;
 }
 
+#hex,#hex-inversion {
+  font-family: 'Fira Code', monospace;
+  font-size: 5vh;
+  font-weight: bold;
+  text-align: center;
+  width: calc(0.65*200vw - 85vw - 20rem);
+  text-wrap: wrap;
+  z-index: 1000;
+  bottom: 1vh;
+  right: calc(87.5vw + 15rem);
+  position: absolute;
+  aspect-ratio: 2/1;
+}
+
+#hex-inversion {
+  background-color: var(--secondary-color);
+  color: var(--secondary-background);
+  clip-path: circle(calc(0.3*(0.65*200vw - 85vw - 20rem)));
+  z-index: 1001;
+}
+
 @media (orientation: portrait) {
   .name-card ul {
+    display: none;
+  }
+
+  #hex {
+    display: none;
+  }
+
+  #hex-inversion {
     display: none;
   }
 }
