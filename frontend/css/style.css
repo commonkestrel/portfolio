@@ -255,6 +255,18 @@ div:has(> .header-link) {
   border-right-width: 2px;
   border-top-style: solid;
   border-top-width: 1px;
+  position: relative;
+  left: -50%;
+}
+
+.scroller:nth-child(even) > .scroller-text p {
+  animation: 10s linear  0s scroll;
+  animation-iteration-count: infinite;
+}
+
+.scroller:nth-child(odd) > .scroller-text p {
+  animation: 10s linear  0s scroll-reverse;
+  animation-iteration-count: infinite;
 }
 
 .scroller-info {
@@ -294,6 +306,16 @@ div:has(> .header-link) {
 .scroller-title {
   padding-left: 3rem;
   margin: 0;
+}
+
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
+}
+
+@keyframes scroll-reverse {
+  from { transform: translateX(0); }
+  to { transform: translateX(100%); }
 }
 
 @media (orientation: portrait) {
