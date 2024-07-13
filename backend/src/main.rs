@@ -8,7 +8,31 @@ const FRONTEND: &str = "./frontend";
 #[get("/")]
 async fn index() -> actix_web::Result<NamedFile> {
     let path = Path::new(FRONTEND).join("index.html");
-    Ok(NamedFile::open(path)?)
+    Ok(NamedFile::open_async(path).await?)
+}
+
+#[get("/about")]
+async fn about() -> actix_web::Result<NamedFile> {
+    let path = Path::new(FRONTEND).join("about.html");
+    Ok(NamedFile::open_async(path).await?)
+}
+
+#[get("/experience")]
+async fn experience() -> actix_web::Result<NamedFile> {
+    let path = Path::new(FRONTEND).join("experience.html");
+    Ok(NamedFile::open_async(path).await?)
+}
+
+#[get("/extracurriculars")]
+async fn extracurriculars() -> actix_web::Result<NamedFile> {
+    let path = Path::new(FRONTEND).join("extracurriculars.html");
+    Ok(NamedFile::open_async(path).await?)
+}
+
+#[get("/contact")]
+async fn contact() -> actix_web::Result<NamedFile> {
+    let path = Path::new(FRONTEND).join("contact.html");
+    Ok(NamedFile::open_async(path).await?)
 }
 
 #[actix_web::main]
@@ -19,6 +43,10 @@ async fn main() -> std::io::Result<()> {
     HttpServer::new(|| 
         App::new()
             .service(index)
+            .service(about)
+            .service(experience)
+            .service(extracurriculars)
+            .service(contact)
             .service(actix_files::Files::new("/static", Path::new(FRONTEND).join("static")))
             .service(actix_files::Files::new("/js", Path::new(FRONTEND).join("out")))
             .service(actix_files::Files::new("/css", Path::new(FRONTEND).join("css")))

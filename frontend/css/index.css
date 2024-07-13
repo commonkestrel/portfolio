@@ -1,19 +1,3 @@
-html {
-  height: 100%;
-  width: 100%;
-
-  --primary-color: #F6FFFF;
-  --primary-background: #e80013;
-  --secondary-color: #D2DBED;
-  --secondary-background: #0e190e;
-  overflow: hidden;
-}
-
-body {
-  width: 100%;
-  font-family: 'Jost', serif;
-  margin: 0;
-}
 
 .header {
   z-index: 999;
@@ -191,7 +175,7 @@ div:has(> .header-link) {
   bottom: 1vh;
   right: calc(87.5vw + 15rem);
   position: absolute;
-  height: calc(min(37vh, 25vw));
+  height: calc(min(37vh, 40vw));
   overflow: hidden;
 }
 
@@ -215,6 +199,8 @@ div:has(> .header-link) {
 .main {
   display: flex;
   flex-direction: column;
+  position: relative;
+  left: -10vw;
 }
 
 .scroller {
@@ -226,6 +212,17 @@ div:has(> .header-link) {
   height: 15vh;
   display: flex;
   flex-direction: column;
+  transition: background-color 0.5s ease-out, color 0.5s ease-out;
+  cursor: pointer;
+}
+
+.scroller:link {
+  text-decoration: none;
+}
+
+.scroller:hover {
+  background-color: var(--secondary-color) !important;
+  color: var(--secondary-background) !important;
 }
 
 .scroller-text {
@@ -255,8 +252,6 @@ div:has(> .header-link) {
   border-right-width: 2px;
   border-top-style: solid;
   border-top-width: 1px;
-  position: relative;
-  left: -50%;
 }
 
 .scroller:nth-child(even) > .scroller-text p {
@@ -314,8 +309,8 @@ div:has(> .header-link) {
 }
 
 @keyframes scroll-reverse {
-  from { transform: translateX(0); }
-  to { transform: translateX(100%); }
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
 }
 
 @media (orientation: portrait) {

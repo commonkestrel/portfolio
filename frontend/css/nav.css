@@ -1,0 +1,75 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4rem;
+    background-color: var(--secondary-color);
+}
+
+.lines {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 4rem;
+    cursor: pointer;
+}
+
+.lines a {
+    color: var(--secondary-background);
+    font-size: 2.5rem;
+    position: absolute;
+    left: 2rem;
+    top: 0;
+    margin: 0;
+    z-index: 1;
+    text-decoration: none;
+}
+
+.line {
+    padding: 0;
+    width: 0;
+    height: 70%;
+    border-left: var(--secondary-background) solid 2px;
+    background-color: var(--secondary-color);
+    margin-top: calc(2rem/3);
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+    margin-right: 0;
+    transition: padding-left 0.5s ease-in-out, padding-right 0.5s ease-in-out, margin-right 0.5s ease-in-out;
+    z-index: 2;
+}
+
+.lines:hover .line {
+    padding-left: 0;
+    padding-right: 0;
+    margin-right: -2px;
+}
+
+.left-content {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    margin-left: 1rem;    
+}
+
+.navbar-links {
+    margin-top: 0.25rem;
+    margin-left: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    width: 5rem;
+  }
+  
+  .nav-link {
+    font-weight: 900;
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--secondary-background);
+    font-size: 0.75rem;
+    transition: font-size 0.25s ease-out;
+  }
+  
+  .nav-link:hover {
+    font-size: 0.8rem;
+  }
