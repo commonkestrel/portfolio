@@ -3,9 +3,9 @@ html {
   width: 100%;
 
   --primary-color: #F6FFFF;
-  --primary-background: #D60619;
+  --primary-background: #e80013;
   --secondary-color: #D2DBED;
-  --secondary-background: #234428;
+  --secondary-background: #0e190e;
   overflow: hidden;
 }
 
@@ -183,6 +183,7 @@ div:has(> .header-link) {
   font-family: 'Fira Code', monospace;
   font-size: 5vh;
   font-weight: bold;
+  color: var(--secondary-color);
   text-align: center;
   width: calc(0.65*200vw - 85vw - 20rem);
   text-wrap: wrap;
@@ -192,7 +193,6 @@ div:has(> .header-link) {
   position: absolute;
   height: calc(min(37vh, 25vw));
   overflow: hidden;
-  vertical-align:middle;
 }
 
 #hex-inversion {
@@ -218,11 +218,22 @@ div:has(> .header-link) {
 }
 
 .scroller {
-  height: 18vh;
+  width: 120vw;
+  overflow: hidden;
+  position: relative;
+  left: 10vw;
+  padding: 0;
+  height: 15vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.scroller-text {
+  text-wrap: nowrap;
   display: flex;
   flex-direction: row;
   font-size: 10vh;
-  font-weight: lighter;
+  text-align: top;
 }
 
 .scroller:nth-child(odd) {
@@ -232,14 +243,57 @@ div:has(> .header-link) {
 
 .scroller:nth-child(even) {
   background-color: var(--primary-background);
-  color: var(--primary-color);
+  color: var(--secondary-background);
 }
 
-.scroller p {
+.scroller-text p {
   margin-top: 0;
   margin-bottom: 0;
-  margin-left: 2rem;
-  margin-right: 2rem;
+  padding-left: 7rem;
+  padding-right: 7rem;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-top-style: solid;
+  border-top-width: 1px;
+}
+
+.scroller-info {
+  width: 100vw;
+  align-items: end;
+  justify-content: right;
+  margin: 0;
+  font-size: 2vh;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+
+.scroller:nth-child(1) .scroller-info {
+  right: calc(1rem - 8vw);
+}
+
+.scroller:nth-child(2) .scroller-info {
+  right: calc(2rem - 8vw);
+}
+
+.scroller:nth-child(3) .scroller-info {
+  right: calc(3rem - 8vw);
+}
+
+.scroller:nth-child(4) .scroller-info {
+  right: calc(4rem - 8vw);
+}
+
+.scroller-type {
+  margin: 0;
+  padding-right: 4rem;
+  border-right-style: solid;
+  border-right-width: 1px;
+}
+
+.scroller-title {
+  padding-left: 3rem;
+  margin: 0;
 }
 
 @media (orientation: portrait) {
