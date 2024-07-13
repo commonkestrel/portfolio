@@ -230,6 +230,7 @@ div:has(> .header-link) {
   display: flex;
   flex-direction: row;
   font-size: 10vh;
+  line-height: 12vh;
   text-align: top;
 }
 
@@ -276,19 +277,19 @@ div:has(> .header-link) {
 }
 
 .scroller:nth-child(1) .scroller-info {
-  right: calc(1rem - 8vw);
+  right: calc(1rem - 18vw);
 }
 
 .scroller:nth-child(2) .scroller-info {
-  right: calc(2rem - 8vw);
+  right: calc(2rem - 18vw);
 }
 
 .scroller:nth-child(3) .scroller-info {
-  right: calc(3rem - 8vw);
+  right: calc(3rem - 18vw);
 }
 
 .scroller:nth-child(4) .scroller-info {
-  right: calc(4rem - 8vw);
+  right: calc(4rem - 18vw);
 }
 
 .scroller-type {

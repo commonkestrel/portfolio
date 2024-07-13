@@ -4,7 +4,10 @@
     left: 0;
     width: 100%;
     height: 4rem;
-    background-color: var(--secondary-color);
+    background-color: var(--secondary-background);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .lines {
@@ -16,7 +19,7 @@
 }
 
 .lines a {
-    color: var(--secondary-background);
+    color: var(--secondary-color);
     font-size: 2.5rem;
     position: absolute;
     left: 2rem;
@@ -30,8 +33,8 @@
     padding: 0;
     width: 0;
     height: 70%;
-    border-left: var(--secondary-background) solid 2px;
-    background-color: var(--secondary-color);
+    border-left: var(--secondary-color) solid 2px;
+    background-color: var(--secondary-background);
     margin-top: calc(2rem/3);
     padding-left: 0.25rem;
     padding-right: 0.25rem;
@@ -53,23 +56,53 @@
     margin-left: 1rem;    
 }
 
-.navbar-links {
+.extern-links {
     margin-top: 0.25rem;
     margin-left: 0.5rem;
     display: flex;
     flex-direction: column;
     width: 5rem;
-  }
-  
-  .nav-link {
+}
+
+.extern-link {
     font-weight: 900;
     text-decoration: none;
     cursor: pointer;
-    color: var(--secondary-background);
+    color: var(--secondary-color);
     font-size: 0.75rem;
     transition: font-size 0.25s ease-out;
-  }
-  
-  .nav-link:hover {
+}
+
+.extern-link:hover {
     font-size: 0.8rem;
-  }
+}
+
+.checkerboard {
+    position: relative;
+    left: 1rem;
+    top: 0.5rem;
+    height: 3rem;
+    background: repeating-conic-gradient(var(--secondary-background) 0% 25%, var(--primary-color) 0% 50%)
+        50% / 20px 20px;
+    border-radius: 0.25rem;
+    flex: 1;
+    margin: 0 3rem;
+}
+
+.right-content {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    align-items: center;
+    position: relative;
+    padding: 0;
+    right: 0;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-size: 2rem;
+    font-weight: 800;
+    padding: 0 2rem;
+}
