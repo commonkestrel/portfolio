@@ -129,14 +129,6 @@ div:has(> .header-link) {
   color: var(--secondary-background);
 }
 
-.main {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-}
-
 .line {
   padding: 0;
   width: 2px;
@@ -218,6 +210,36 @@ div:has(> .header-link) {
 @keyframes clip-pulse {
   from {clip-path: circle(calc(0.25*(0.65*200vw - 85vw - 20rem)));}
   to {clip-path: circle(calc(0.3*(0.65*200vw - 85vw - 20rem)));}
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.scroller {
+  height: 18vh;
+  display: flex;
+  flex-direction: row;
+  font-size: 10vh;
+  font-weight: lighter;
+}
+
+.scroller:nth-child(odd) {
+  background-color: var(--secondary-background);
+  color: var(--secondary-color);
+}
+
+.scroller:nth-child(even) {
+  background-color: var(--primary-background);
+  color: var(--primary-color);
+}
+
+.scroller p {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 @media (orientation: portrait) {
