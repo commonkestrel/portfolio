@@ -198,14 +198,26 @@ div:has(> .header-link) {
   bottom: 1vh;
   right: calc(87.5vw + 15rem);
   position: absolute;
-  aspect-ratio: 2/1;
+  height: calc(min(37vh, 25vw));
+  overflow: hidden;
+  vertical-align:middle;
 }
 
 #hex-inversion {
   background-color: var(--secondary-color);
   color: var(--secondary-background);
-  clip-path: circle(calc(0.3*(0.65*200vw - 85vw - 20rem)));
+  clip-path: circle(calc(0.25*(0.65*200vw - 85vw - 20rem)));
   z-index: 1001;
+  animation-name: clip-pulse;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes clip-pulse {
+  from {clip-path: circle(calc(0.25*(0.65*200vw - 85vw - 20rem)));}
+  to {clip-path: circle(calc(0.3*(0.65*200vw - 85vw - 20rem)));}
 }
 
 @media (orientation: portrait) {
