@@ -8,6 +8,7 @@ main {
     width: 100%;
     min-height: 100%;
     color: var(--secondary-color);
+    padding-bottom: 10rem;
 }
 
 .content {
@@ -75,9 +76,36 @@ p .highlight::before {
 }
 
 .portrait {
-    width: 15rem;
-    clip-path: circle(5.9rem);
+    height: calc(min(15rem, 30vw));
+    width: calc(min(15rem, 30vw));
+    object-fit: cover;
+    clip-path: circle(calc(min(5.9rem, 11vw)));
     margin: 1rem;
-    float: left;
     transform: scale(125%);
+    overflow: hidden;
+    padding: 0;
+}
+
+.content div {
+    width: 100%;
+}
+
+.content div:has(.portrait) {
+    min-height: min(15rem, 30vw);
+}
+
+.content > div:nth-of-type(odd) img {
+    float: left;
+}
+
+
+.content > div:nth-of-type(even) img {
+    float: right;
+}
+
+.divider {
+    width: 100%;
+    height: 3.5rem;
+    margin-bottom: 3.5rem;
+    border-bottom: var(--secondary-color) solid 1px;
 }

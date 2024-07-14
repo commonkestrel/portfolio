@@ -6,7 +6,8 @@ html {
     --primary-background: #e30000;
     --secondary-color: #D2DBED;
     --secondary-background: #001406;
-    overflow: hidden;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 body {
@@ -14,5 +15,5 @@ body {
     height: 100%;
     font-family: 'Jost', serif;
     margin: 0;
-    overflow: hidden;
+    overflow-y: scroll;
 }
