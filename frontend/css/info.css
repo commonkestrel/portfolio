@@ -46,7 +46,7 @@ main {
     left: -2.5%;
     margin-bottom: 0.5em;
     transition: height 200ms ease;
-    background: linear-gradient(180deg, transparent 50%, var(--primary-background) 50%);
+    background: linear-gradient(180deg, transparent 50%, #fe55b2 50%);
 }
 
 p .highlight::before {

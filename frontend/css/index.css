@@ -120,7 +120,7 @@ div:has(> .header-link) {
 }
 
 .link-wrapper:not(:first-child) {
-  border-top: #4E624D 2px solid;
+  border-top: var(--primary-background) 2px solid;
 }
 
 .link-wrapper:nth-last-child(2) {

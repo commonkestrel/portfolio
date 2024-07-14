@@ -2,10 +2,10 @@ html {
     height: 100%;
     width: 100%;
 
-    --primary-color: #F6FFFF;
-    --primary-background: #e30000;
-    --secondary-color: #D2DBED;
-    --secondary-background: #001406;
+    --primary-background: #FE5E55;
+    --primary-color: #EEF5DB;
+    --secondary-color: #f3e5f3;
+    --secondary-background: #773344;
     overflow-y: scroll;
     overflow-x: hidden;
 }
