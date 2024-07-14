@@ -1,5 +1,5 @@
 html, body {
-  overflow: hidden;
+  overflow: hidden !important;
 }
 
 .header {
@@ -287,12 +287,12 @@ div:has(> .header-link) {
 }
 
 .scroller:nth-child(even) > .scroller-text p {
-  animation: 10s linear  0s scroll;
+  animation: 15s linear  0s scroll;
   animation-iteration-count: infinite;
 }
 
 .scroller:nth-child(odd) > .scroller-text p {
-  animation: 10s linear  0s scroll-reverse;
+  animation: 15s linear  0s scroll-reverse;
   animation-iteration-count: infinite;
 }
 

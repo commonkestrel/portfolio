@@ -1,7 +1,7 @@
-use actix_web::{get, middleware::Logger, post, web, App, HttpResponse, HttpServer, Responder};
+use actix_web::{get, middleware::Logger, App, HttpServer};
 use actix_files::NamedFile;
 use env_logger::Env;
-use std::path::{Path, PathBuf};
+use std::path::Path;
 
 const FRONTEND: &str = "./frontend";
 
