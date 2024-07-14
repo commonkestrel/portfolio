@@ -91,11 +91,11 @@ p .highlight::before {
     padding: 0;
 }
 
-.content div {
+.content > div {
     width: 100%;
 }
 
-.content div:has(.portrait) {
+.content > div:has(.portrait) {
     min-height: min(15rem, 30vw);
 }
 

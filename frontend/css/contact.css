@@ -1,0 +1,57 @@
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 2rem;
+}
+
+.small-input {
+    outline: none;
+    border-radius: 1rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    width: calc(100% - 2rem);
+    position: relative;
+    padding: 0.5rem 1rem;
+    font-family: "Jost";
+    border: var(--primary-background) solid 2px;
+}
+
+.big-input {
+    outline: none;
+    border-radius: 1rem;
+    font-size: 1.25rem;
+    width: calc(100% - 2rem);
+    height: 10rem;
+    font-family: "Jost";
+    overflow: hidden;
+    border: var(--primary-background) solid 2px;
+    padding: 0.5rem 1rem;
+}
+
+.input-pair {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: start;
+    width: 80%;
+}
+
+.input-pair label {
+    font-size: 1.5rem;
+    font-weight: 700;
+    width: 0;
+    text-wrap: nowrap;
+}
+
+.submit-button {
+    width: 12rem;
+    height: 3.5rem;
+    border-radius: 1.75rem;
+    border: var(--primary-color) solid 2px;
+    background-color: var(--primary-background);
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    font-weight: 700;
+    transition: border 0.5s ease-out;
+}
