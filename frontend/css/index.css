@@ -296,13 +296,16 @@ div:has(> .header-link) {
   animation-iteration-count: infinite;
 }
 
+.scroller:nth-child(even) .scroller-info {
+  font-weight: 700;
+}
+
 .scroller-info {
   width: 100vw;
   align-items: end;
   justify-content: right;
   margin: 0;
   font-size: 2vh;
-  font-weight: 700;
   position: relative;
   display: flex;
   flex-direction: row;
