@@ -8,7 +8,7 @@ html, body {
   flex-direction: row;
   flex-wrap: wrap;
   width: 200vw;
-  height: calc(min(50vh, 30vw + 12rem));
+  height: calc(min(50vh + 4rem, 30vw + 12rem));
   position: relative;
   top: -10rem;
   left: -20vw;
@@ -32,7 +32,7 @@ html, body {
   left: 14vw;
   position: relative;
   margin: 0;
-  font-size: calc(min(20rem, 25vw));
+  font-size:calc(min(20rem, 40vh));
   font-weight: normal;
 }
 
@@ -41,7 +41,7 @@ html, body {
   right: calc(4.5*min(4.25rem, 5vw) - 14vw);
   bottom: calc(min(4.25rem, 0.5vw));
   margin: 0;
-  font-size: calc(min(4.25rem, 5vw));
+  font-size: calc(min(4.25rem, 8.5vh));
   font-weight: normal;
   letter-spacing: 2px;
 }
@@ -63,6 +63,24 @@ html, body {
   position: relative;
   bottom: 2vw;
   left: 12vw;
+  display: flex;
+  justify-content: center;
+  align-items: middle;
+}
+
+.circle img {
+  height: 8vw;
+  position: relative;
+  left: 46%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(60%);
+  opacity: 0;
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.circle:hover img {
+  transform: translate(-50%, -50%) scale(100%);
+  opacity: 1;
 }
 
 .nav-card {
@@ -240,7 +258,7 @@ div:has(> .header-link) {
   position: relative;
   left: 10vw;
   padding: 0;
-  height: 15vh;
+  height: calc(15vh - 1rem);
   display: flex;
   flex-direction: column;
   transition: background-color 0.5s ease-out, color 0.5s ease-out;
@@ -260,8 +278,8 @@ div:has(> .header-link) {
   text-wrap: nowrap;
   display: flex;
   flex-direction: row;
-  font-size: 10vh;
-  line-height: 12vh;
+  font-size: calc(10vh - 1rem);
+  line-height: calc(12vh - 1rem);
   text-align: top;
 }
 

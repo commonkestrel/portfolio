@@ -68,6 +68,16 @@ p .highlight::before {
     margin: 0;
 }
 
+.content ul {
+    font-size: 1.3rem;
+    margin: -1rem;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
 @media (orientation:landscape) {
     .content {
         width: 60%;
