@@ -38,7 +38,7 @@
     padding-left: 0.25rem;
     padding-right: 0.25rem;
     margin-right: 0;
-    transition: padding-left 0.25s ease-out, padding-right 0.25s ease-out, margin-right 0.25s ease-out;
+    transition: padding-left 0.25s cubic-bezier(1, 0, 0, 1), padding-right 0.25s cubic-bezier(1, 0, 0, 1), margin-right 0.25s cubic-bezier(1, 0, 0, 1);
     z-index: 2;
 }
 
@@ -51,7 +51,7 @@
 .lines:hover .line {
     padding-left: 0;
     padding-right: 0;
-    margin-right: -2px;
+    margin-right: -3px;
 }
 
 .left-content {
